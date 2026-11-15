@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Himalayan Bistro — Premier Restaurant Management System. Authentic Himalayan Dining Operations & SaaS Management Portal.">
+  <meta name="theme-color" content="#11161F">
+  
+  <title>Himalayan Bistro — Restaurant Management System</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Design System Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       EMBEDDED SVG SPRITE
+       Guarantees 100% offline and local file:// double-click compatibility
+       ======================================================================== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon-cloche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 18h16"></path>
+      <path d="M4 18c0-5 3.5-9 8-9s8 4 8 9"></path>
+      <circle cx="12" cy="6" r="2"></circle>
+      <path d="M2 20h20"></path>
+    </symbol>
+    <symbol id="icon-mountain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+    </symbol>
+    <symbol id="icon-dashboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+      <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+    </symbol>
+    <symbol id="icon-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"></path>
+      <path d="M15 2v18"></path>
+      <path d="M7 2h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7V2Z"></path>
+      <path d="M7 12v10"></path>
+    </symbol>
+    <symbol id="icon-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v18"></path>
+      <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+      <path d="M3 9h18"></path>
+      <path d="M3 15h18"></path>
+    </symbol>
+    <symbol id="icon-orders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8" cy="21" r="1"></circle>
+      <circle cx="19" cy="21" r="1"></circle>
+      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+    </symbol>
+    <symbol id="icon-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+    </symbol>
+    <symbol id="icon-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m7.5 4.27 9 5.15"></path>
+      <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+      <path d="m3.3 7 8.7 5 8.7-5"></path>
+      <path d="M12 22V12"></path>
+    </symbol>
+    <symbol id="icon-trending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+      <polyline points="16 7 22 7 22 13"></polyline>
+    </symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </symbol>
+    <symbol id="icon-customers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </symbol>
+    <symbol id="icon-logout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+      <polyline points="16 17 21 12 16 7"></polyline>
+      <line x1="21" y1="12" x2="9" y2="12"></line>
+    </symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+      <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="m9 12 2 2 4-4"></path>
+    </symbol>
+    <symbol id="icon-alert-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="12"></line>
+      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+    </symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M12 16v-4"></path>
+      <path d="M12 8h.01"></path>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <polyline points="12 6 12 12 16 14"></polyline>
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+    </symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </symbol>
+    <symbol id="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+      <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
+      <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
+      <line x1="2" y1="2" x2="22" y2="22"></line>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+      <line x1="16" y1="2" x2="16" y2="6"></line>
+      <line x1="8" y1="2" x2="8" y2="6"></line>
+      <line x1="3" y1="10" x2="21" y2="10"></line>
+    </symbol>
+    <symbol id="icon-receipt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z"></path>
+      <path d="M16 8H8"></path>
+      <path d="M16 12H8"></path>
+      <path d="M13 16H8"></path>
+    </symbol>
+    <symbol id="icon-reports" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <polyline points="14 2 14 8 20 8"></polyline>
+      <line x1="16" y1="13" x2="8" y2="13"></line>
+      <line x1="16" y1="17" x2="8" y2="17"></line>
+      <polyline points="10 9 9 9 8 9"></polyline>
+    </symbol>
+    <symbol id="icon-chili" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 4c0 2-1 3-3 4-4 2-7 6-7 10a5 5 0 0 0 9 3c4-4 5-8 5-13 0-2 0-3-4-4Z"></path>
+      <path d="M17 3c.5 1.5 2 2 3 2"></path>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </symbol>
+  </svg>
+
+  <!-- ========================================================================
+       1. LOGIN PAGE INTERFACE (AUTHENTICATION)
+       ======================================================================== -->
+  <div class="login-screen is-hidden" id="loginScreen" role="region" aria-label="Staff Login Portal">
+    <div class="login-card">
+      
+      <!-- Left Visual Showcase Pane -->
+      <div class="login-visual-pane">
+        <div class="login-visual-top">
+          <div class="login-brand-lockup">
+            <img src="assets/logo/himalayan-bistro-mark.svg" alt="Himalayan Bistro Mark" class="login-brand-logo">
+            <div>
+              <div class="login-brand-title">HIMALAYAN <span>BISTRO</span></div>
+              <div class="login-brand-subtitle">Restaurant Management System</div>
+            </div>
+          </div>
+
+          <h2 class="login-hero-headline">
+            Authentic Mountain Flavors. <span>Enterprise Velocity.</span>
+          </h2>
+          <p class="login-hero-description">
+            Sign in to access your shift terminal, live kitchen queue, dining floor reservations, and real-time sales telemetry.
+          </p>
+
+          <ul class="login-feature-list">
+            <li class="login-feature-item">
+              <svg class="icon"><use href="#icon-check-circle"></use></svg>
+              <span>Instant Table Floor Occupancy & Reservations</span>
+            </li>
+            <li class="login-feature-item">
+              <svg class="icon"><use href="#icon-check-circle"></use></svg>
+              <span>Real-Time Kitchen Display System (KDS) Queue</span>
+            </li>
+            <li class="login-feature-item">
+              <svg class="icon"><use href="#icon-check-circle"></use></svg>
+              <span>Audit-Ready VAT & Financial Analytics</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="login-visual-footer">
+          <span>Himalayan Bistro Commercial Suite</span>
+          <span>© 2026 All Rights Reserved</span>
+        </div>
+      </div>
+
+      <!-- Right Form Pane -->
+      <div class="login-form-pane">
+        <div class="login-form-header">
+          <span class="badge badge-primary" style="margin-bottom: 8px;">Staff Portal</span>
+          <h1 class="login-form-title">Sign In to Bistro</h1>
+          <p class="login-form-subtitle">Enter your restaurant staff credentials to continue.</p>
+        </div>
+
+        <!-- Quick Demo Credentials Selector -->
+        <div class="demo-creds-container">
+          <div class="demo-creds-title">
+            <span>Quick Demo Credentials (Click to Fill)</span>
+            <span style="color: var(--color-primary); font-size: 10px;">TEST READY</span>
+          </div>
+          <div class="demo-pills-list">
+            <button type="button" class="demo-pill-btn" data-email="admin@himalayanbistro.com" data-pass="bistro2026">
+              <strong>Admin</strong> <span class="role-tag">(Sunita K.)</span>
+            </button>
+            <button type="button" class="demo-pill-btn" data-email="manager@himalayanbistro.com" data-pass="manager2026">
+              <strong>Manager</strong> <span class="role-tag">(Rohan M.)</span>
+            </button>
+            <button type="button" class="demo-pill-btn" data-email="cashier@himalayanbistro.com" data-pass="pos2026">
+              <strong>Cashier</strong> <span class="role-tag">(Anish T.)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Auth Alert Message -->
+        <div class="auth-alert-box" id="authAlertBox">
+          <svg class="icon" style="width: 16px; height: 16px; flex-shrink: 0;"><use href="#icon-alert-circle"></use></svg>
+          <span id="authAlertMsg">Invalid credentials. Please select a demo pill.</span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" autocomplete="on">
+          <div class="form-group">
+            <label class="form-label" for="loginEmail">Staff Email Address</label>
+            <div class="password-input-group">
+              <svg class="input-lead-icon"><use href="#icon-mail"></use></svg>
+              <input 
+                type="email" 
+                id="loginEmail" 
+                class="form-control" 
+                placeholder="e.g. admin@himalayanbistro.com" 
+                value="admin@himalayanbistro.com"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: var(--space-4);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <label class="form-label" for="loginPassword">Access Password</label>
+              <span style="font-size: 11px; color: var(--color-secondary); font-weight: 600;">PIN: 2026</span>
+            </div>
+            <div class="password-input-group">
+              <svg class="input-lead-icon"><use href="#icon-lock"></use></svg>
+              <input 
+                type="password" 
+                id="loginPassword" 
+                class="form-control" 
+                placeholder="Enter password" 
+                value="bistro2026"
+                required
+              >
+              <button type="button" class="password-toggle-btn" id="passwordToggleBtn" aria-label="Show password">
+                <svg class="icon"><use href="#icon-eye"></use></svg>
+              </button>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-5);">
+            <label class="toggle-switch">
+              <input type="checkbox" id="loginRememberMe" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-label" style="font-size: 13px;">Remember session</span>
+            </label>
+            <a href="#" style="font-size: 12px; color: var(--color-primary); font-weight: 600;" onclick="Toast.info('PIN Reset', 'Demo default password is: bistro2026'); return false;">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="btnLoginSubmit" style="width: 100%; padding: 0.85rem; font-size: 15px;">
+            <span>Sign In to Bistro Portal</span>
+            <svg class="icon"><use href="#icon-chevron-right"></use></svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. ADMIN LAYOUT & SHELL ARCHITECTURE
+       ======================================================================== -->
+  <div class="app-shell" id="adminAppShell">
+    
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Responsive Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="#" class="sidebar-brand-link" onclick="navigateTo('dashboard'); return false;">
+          <img src="assets/logo/himalayan-bistro-mark.svg" alt="Himalayan Bistro Mark" class="sidebar-brand-mark">
+          <div class="sidebar-brand-text">
+            <span class="sidebar-brand-name">HIMALAYAN <span>BISTRO</span></span>
+            <span class="sidebar-brand-sub">Management System</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav-container">
+        <!-- Main Operations -->
+        <div>
+          <div class="nav-group-title">Operations</div>
+          <ul class="nav-list">
+            <li>
+              <a href="#dashboard" class="nav-item-link sidebar-nav-link is-active" data-view="dashboard">
+                <svg class="nav-icon"><use href="#icon-dashboard"></use></svg>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#pos" class="nav-item-link sidebar-nav-link" data-view="pos">
+                <svg class="nav-icon"><use href="#icon-orders"></use></svg>
+                <span>POS</span>
+                <span class="nav-badge" style="background-color: var(--color-primary-light); color: var(--color-primary); font-weight: 700;">Live</span>
+              </a>
+            </li>
+            <li>
+              <a href="#orders" class="nav-item-link sidebar-nav-link" data-view="orders">
+                <svg class="nav-icon"><use href="#icon-receipt"></use></svg>
+                <span>Orders</span>
+                <span class="nav-badge">7 New</span>
+              </a>
+            </li>
+            <li>
+              <a href="#menu" class="nav-item-link sidebar-nav-link" data-view="menu">
+                <svg class="nav-icon"><use href="#icon-utensils"></use></svg>
+                <span>Menu</span>
+                <span class="nav-badge">6</span>
+              </a>
+            </li>
+            <li>
+              <a href="#tables" class="nav-item-link sidebar-nav-link" data-view="tables">
+                <svg class="nav-icon"><use href="#icon-table"></use></svg>
+                <span>Tables</span>
+                <span class="nav-badge" style="background-color: var(--color-secondary-light); color: var(--color-secondary-active);">8/12</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Management & Administration -->
+        <div>
+          <div class="nav-group-title">Management</div>
+          <ul class="nav-list">
+            <li>
+              <a href="#customers" class="nav-item-link sidebar-nav-link" data-view="customers">
+                <svg class="nav-icon"><use href="#icon-customers"></use></svg>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li>
+              <a href="#inventory" class="nav-item-link sidebar-nav-link" data-view="inventory">
+                <svg class="nav-icon"><use href="#icon-package"></use></svg>
+                <span>Inventory</span>
+                <span class="nav-badge" style="background-color: var(--color-danger-bg); color: var(--color-danger); font-weight: 700;">2 Low</span>
+              </a>
+            </li>
+            <li>
+              <a href="#staff" class="nav-item-link sidebar-nav-link" data-view="staff">
+                <svg class="nav-icon"><use href="#icon-users"></use></svg>
+                <span>Staff</span>
+                <span class="nav-badge">8</span>
+              </a>
+            </li>
+            <li>
+              <a href="#reports" class="nav-item-link sidebar-nav-link" data-view="reports">
+                <svg class="nav-icon"><use href="#icon-reports"></use></svg>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#settings" class="nav-item-link sidebar-nav-link" data-view="settings">
+                <svg class="nav-icon"><use href="#icon-settings"></use></svg>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Sidebar Footer: Active Operator Profile & Logout -->
+      <div class="sidebar-footer">
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+          <div class="user-profile-pill">
+            <div class="user-avatar user-avatar-text">SK</div>
+            <div class="user-info">
+              <span class="user-name user-name-text">Sunita Karmacharya</span>
+              <span class="user-role user-role-text">Administrator • Shift 1</span>
+            </div>
+          </div>
+          <button class="btn btn-icon btn-ghost action-logout-btn" title="Sign Out of Portal" style="color: var(--color-danger);">
+            <svg class="icon"><use href="#icon-logout"></use></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Shell Area -->
+    <div class="main-wrapper">
+      
+      <!-- Top Navigation Bar -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle Navigation Drawer">
+            <svg class="icon"><use href="#icon-menu"></use></svg>
+          </button>
+
+          <!-- Dynamic Breadcrumbs -->
+          <nav class="breadcrumbs-bar" aria-label="Breadcrumb">
+            <a href="#" class="breadcrumb-item" onclick="navigateTo('dashboard'); return false;">Himalayan Bistro</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item">Operations</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item is-current" id="breadcrumbCurrent">Dashboard & Overview</span>
+          </nav>
+        </div>
+
+        <div class="header-right">
+          <!-- Live Global Search -->
+          <div class="header-search-wrap" style="max-width: 280px;">
+            <div class="input-with-icon">
+              <svg class="input-icon-lead"><use href="#icon-search"></use></svg>
+              <input type="search" id="globalSearchInput" class="form-control" placeholder="Search orders, dishes, guests...">
+            </div>
+          </div>
+
+          <!-- Shift Status Indicator -->
+          <div class="system-status-indicator" id="currentShiftBadge" style="display: flex; align-items: center; gap: 6px;">
+            <span class="status-dot status-dot-available status-dot-pulse"></span>
+            <span>Dinner Rush Shift • Online</span>
+          </div>
+
+          <!-- Notification Bell -->
+          <button class="btn btn-icon btn-outline" aria-label="Notifications" onclick="Toast.info('Kitchen Alert', 'Order HB-1048 (Table 04) is ready for table service.')">
+            <svg class="icon"><use href="#icon-bell"></use></svg>
+          </button>
+
+          <!-- Top Logout Button -->
+          <button class="btn btn-outline btn-sm action-logout-btn" title="Sign Out">
+            <svg class="icon"><use href="#icon-logout"></use></svg>
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Dynamic Content Workspace -->
+      <main class="page-container">
+
+        <!-- ==================================================================
+             VIEW 1: ADMIN DASHBOARD
+             ================================================================== -->
+        <section id="view-dashboard" class="view-panel is-active">
+          
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4);">
+            <div>
+              <span class="section-tag">Executive Summary</span>
+              <h1 class="section-title">Operations & Sales Dashboard</h1>
+              <p class="section-desc">Real-time revenue telemetry, table occupancy, kitchen throughput, and recent customer settlements.</p>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: var(--space-3);">
+              <button class="btn btn-outline btn-sm" id="btnRefreshDashboard">
+                <svg class="icon"><use href="#icon-clock"></use></svg>
+                <span>Sync Real-Time Data</span>
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="navigateTo('pos')">
+                <svg class="icon"><use href="#icon-plus"></use></svg>
+                <span>New POS Ticket</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 6 Key Performance Metric Widgets -->
+          <div class="grid-3" id="dashboardKpisGrid" style="grid-template-columns: repeat(3, 1fr);">
+            <!-- Injected via js/app.js -->
+          </div>
+
+          <!-- Revenue Chart & Category Sales Breakdown -->
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-6);" class="grid-2">
+            
+            <div class="chart-card">
+              <div class="chart-card-header">
+                <div class="chart-title-area">
+                  <h2 class="chart-title">Revenue Trajectory</h2>
+                  <span class="chart-subtitle">Gross turnover & hourly peak dinner rush</span>
+                </div>
+                
+                <div class="chart-controls-group">
+                  <button class="chart-period-btn is-active" data-period="today">Today (Hourly)</button>
+                  <button class="chart-period-btn" data-period="weekly">This Week</button>
+                  <button class="chart-period-btn" data-period="monthly">Monthly</button>
+                </div>
+              </div>
+
+              <div class="svg-chart-container" id="revenueChartSvgBox">
+                <!-- SVG rendered via js/app.js -->
+              </div>
+
+              <div class="chart-interactive-tooltip" id="chartInteractiveTooltip"></div>
+            </div>
+
+            <div class="card" style="padding: var(--space-6); display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="card-title" style="font-size: var(--font-size-md); margin-bottom: 2px;">Sales by Culinary Category</div>
+                <div class="card-subtitle" style="margin-bottom: var(--space-5);">Proportion of daily shift gross turnover</div>
+                
+                <div class="category-sales-list" id="categorySalesContainer">
+                  <!-- Injected via js/app.js -->
+                </div>
+              </div>
+
+              <div style="margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--color-border-light); display: flex; justify-content: space-between; font-size: 13px;">
+                <span style="color: var(--color-text-secondary);">Highest Generating:</span>
+                <strong style="color: var(--color-secondary-active);">Thakali Khana Sets (33.8%)</strong>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Popular Food Items & Order Status Breakdown -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);" class="grid-2">
+            
+            <div class="card" style="padding: var(--space-6);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4);">
+                <div>
+                  <h3 class="card-title">Popular Himalayan Dishes</h3>
+                  <p class="card-subtitle">Top velocity menu items ordered today</p>
+                </div>
+                <span class="badge badge-secondary">Top 5 Dishes</span>
+              </div>
+
+              <div id="popularItemsContainer">
+                <!-- Injected via js/app.js -->
+              </div>
+            </div>
+
+            <div class="card" style="padding: var(--space-6); display: flex; flex-direction: column;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-2);">
+                <div>
+                  <h3 class="card-title">Order Status Summary</h3>
+                  <p class="card-subtitle">Kitchen execution & dispatch velocity</p>
+                </div>
+                <span class="badge badge-success">85.2% Completed</span>
+              </div>
+
+              <div id="orderStatusSummaryContainer" style="margin-top: auto;">
+                <!-- Injected via js/app.js -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Recent Transactions & Order Logs -->
+          <div class="card">
+            <div class="card-header" style="flex-wrap: wrap; gap: var(--space-3);">
+              <div>
+                <h3 class="card-title">Recent Transactions & Dining Settlements</h3>
+                <p class="card-subtitle">Real-time table orders, guest tabs, and payment channels</p>
+              </div>
+
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+                <button class="btn btn-sm btn-outline tx-filter-btn is-active" data-status="all">All</button>
+                <button class="btn btn-sm btn-outline tx-filter-btn" data-status="Preparing">Preparing</button>
+                <button class="btn btn-sm btn-outline tx-filter-btn" data-status="Ready">Ready</button>
+                <button class="btn btn-sm btn-outline tx-filter-btn" data-status="Served">Served</button>
+                <button class="btn btn-sm btn-outline tx-filter-btn" data-status="Completed">Completed</button>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Ticket ID</th>
+                    <th>Table / Dining</th>
+                    <th>Customer & Server</th>
+                    <th>Items Summary</th>
+                    <th>Amount (NPR)</th>
+                    <th>Payment Method</th>
+                    <th>Status</th>
+                    <th>Timestamp</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="dashboardTransactionsBody">
+                  <!-- Injected via js/app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ==================================================================
+             VIEW 2: POS TERMINAL
+             ================================================================== -->
+        <section id="view-pos" class="view-panel"></section>
+
+        <!-- ==================================================================
+             VIEW 3: LIVE ORDERS STREAM
+             ================================================================== -->
+        <section id="view-orders" class="view-panel"></section>
+
+        <!-- ==================================================================
+             VIEW 4: CULINARY MENU MANAGEMENT
+             ================================================================== -->
+        <section id="view-menu" class="view-panel"></section>
+
+        <!-- ==================================================================
+             VIEW 5: TABLE FLOOR PLAN MANAGEMENT
+             ================================================================== -->
+        <section id="view-tables" class="view-panel"></section>
+
+        <!-- ==================================================================
+             VIEW 6: CUSTOMER & GUEST CRM
+             ================================================================== -->
+        <section id="view-customers" class="view-panel"></section>
+
+        <!-- ==================================================================
+             VIEW 7: INVENTORY & STOCK MANAGEMENT
+             ================================================================== -->
+        <section id="view-inventory" class="view-panel"></section>
+
+        <!-- ==================================================================
+             VIEW 8: STAFF DUTY ROSTER
+             ================================================================== -->
+        <section id="view-staff" class="view-panel"></section>
+
+        <!-- ==================================================================
+             VIEW 9: FINANCIAL & VAT REPORTS
+             ================================================================== -->
+        <section id="view-reports" class="view-panel"></section>
+
+        <!-- ==================================================================
+             VIEW 10: SETTINGS CONFIGURATION
+             ================================================================== -->
+        <section id="view-settings" class="view-panel"></section>
+
+      </main>
+
+      <!-- Admin App Footer -->
+      <footer style="padding: var(--space-5) var(--space-8); border-top: 1px solid var(--color-border); background-color: var(--color-surface); margin-top: auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4);">
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+          <img src="assets/logo/himalayan-bistro-mark.svg" alt="Mark" style="width: 22px; height: 22px;">
+          <span style="font-size: var(--font-size-xs); color: var(--color-text-secondary); font-weight: 500;">
+            © 2026 <strong>Himalayan Bistro</strong>. Restaurant Management System • Commercial Edition.
+          </span>
+        </div>
+        <div style="font-size: var(--font-size-xs); color: var(--color-text-muted);">
+          100% Vanilla JavaScript • Single Page App • GitHub Pages Ready
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DIALOG (REUSABLE ACCESSIBLE ENGINE)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Order Details</h3>
+        <button class="btn btn-icon btn-ghost modal-close" data-modal-close aria-label="Close Modal">
+          <svg class="icon"><use href="#icon-close"></use></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p style="margin-bottom: var(--space-4); color: var(--color-text-secondary);">
+          Reserve an authentic dining experience at Himalayan Bistro.
+        </p>
+
+        <div class="form-group">
+          <label class="form-label" for="resGuestName">Lead Guest Name</label>
+          <input type="text" id="resGuestName" class="form-control" placeholder="Enter guest name" value="Dawa Lama">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" data-modal-close>Close</button>
+        <button class="btn btn-primary" onclick="Modal.close('demoModal'); Toast.success('Confirmed', 'Details successfully updated.');">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Application Scripts (Vanilla JS Architecture) -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="hbFlame" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D9531E" />
+      <stop offset="100%" stop-color="#F27A3D" />
+    </linearGradient>
+    <linearGradient id="hbGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3C677" />
+      <stop offset="100%" stop-color="#B88636" />
+    </linearGradient>
+    <linearGradient id="hbDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2632" />
+      <stop offset="100%" stop-color="#0F141C" />
+    </linearGradient>
+    <filter id="hbGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#D9531E" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Diamond Shield -->
+  <rect x="6" y="6" width="88" height="88" rx="24" fill="url(#hbDark)" stroke="url(#hbGold)" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Subtle Mountain Silhouette Layer 1 (Background Peak) -->
+  <polygon points="50,22 72,56 28,56" fill="#243040" opacity="0.6"/>
+
+  <!-- Main Himalayan Mountain Peak (Geometric Modernist) -->
+  <polygon points="36,32 58,68 14,68" fill="url(#hbFlame)" filter="url(#hbGlow)" />
+  <polygon points="36,32 58,68 36,68" fill="#B33E10" opacity="0.5"/>
+
+  <!-- Secondary Peak (Warm Brass / Gold) -->
+  <polygon points="62,38 84,72 40,72" fill="url(#hbGold)" opacity="0.95"/>
+  <polygon points="62,38 84,72 62,72" fill="#996D25" opacity="0.4"/>
+
+  <!-- Dining Cloche / Culinary Warmth Arc -->
+  <path d="M22,76 Q50,68 78,76" stroke="url(#hbGold)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M26,81 Q50,75 74,81" stroke="#D9531E" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Rising Culinary Steam / Spice Essence -->
+  <path d="M46,24 C44,18 52,14 48,9" stroke="#F3C677" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 3"/>
+  <path d="M54,26 C56,20 50,16 54,11" stroke="#F27A3D" stroke-width="2" stroke-linecap="round"/>
+</svg>

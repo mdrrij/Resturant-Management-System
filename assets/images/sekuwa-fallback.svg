@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sekuwaBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2D1912" />
+      <stop offset="60%" stop-color="#1A0D08" />
+      <stop offset="100%" stop-color="#0A0503" />
+    </radialGradient>
+    <linearGradient id="charcoalGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E04812" />
+      <stop offset="50%" stop-color="#F28E2B" />
+      <stop offset="100%" stop-color="#9E2E0A" />
+    </linearGradient>
+    <linearGradient id="skewerMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="meatChar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A2C11" />
+      <stop offset="40%" stop-color="#5E1B08" />
+      <stop offset="70%" stop-color="#300B02" />
+      <stop offset="100%" stop-color="#120401" />
+    </linearGradient>
+    <filter id="flameGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#E05D26" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#sekuwaBg)" />
+
+  <!-- Cast Iron Grill Grates -->
+  <line x1="80" y1="120" x2="520" y2="120" stroke="#251612" stroke-width="6" stroke-linecap="round"/>
+  <line x1="80" y1="170" x2="520" y2="170" stroke="#251612" stroke-width="6" stroke-linecap="round"/>
+  <line x1="80" y1="220" x2="520" y2="220" stroke="#251612" stroke-width="6" stroke-linecap="round"/>
+  <line x1="80" y1="270" x2="520" y2="270" stroke="#251612" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Charcoal Glowing Embers Below -->
+  <circle cx="210" cy="290" r="14" fill="#D9531E" opacity="0.3" filter="url(#flameGlow)"/>
+  <circle cx="340" cy="275" r="18" fill="#F59E0B" opacity="0.25" filter="url(#flameGlow)"/>
+  <circle cx="430" cy="295" r="12" fill="#EF4444" opacity="0.3" filter="url(#flameGlow)"/>
+
+  <!-- Skewer 1 (Upper Angle) -->
+  <g transform="translate(60, 140) rotate(-6)">
+    <!-- Steel Skewer Rod -->
+    <line x1="0" y1="0" x2="480" y2="0" stroke="url(#skewerMetal)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Wooden / Twisted Handle -->
+    <rect x="0" y="-5" width="60" height="10" rx="3" fill="#693C19" stroke="#3D210B" stroke-width="1"/>
+    
+    <!-- Meat Chunks with Char Marks -->
+    <!-- Meat 1 -->
+    <rect x="100" y="-18" width="55" height="36" rx="10" fill="url(#meatChar)"/>
+    <line x1="112" y1="-14" x2="112" y2="14" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+    <line x1="134" y1="-14" x2="134" y2="14" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+    <circle cx="125" cy="-2" r="2" fill="#D4A359"/>
+    
+    <!-- Red Onion Wedge -->
+    <path d="M162,-16 C172,-16 172,16 162,16 Z" fill="#991B1B"/>
+    <path d="M164,-12 C170,-12 170,12 164,12 Z" fill="#F87171" opacity="0.6"/>
+
+    <!-- Meat 2 -->
+    <rect x="180" y="-20" width="60" height="40" rx="12" fill="url(#meatChar)"/>
+    <line x1="195" y1="-16" x2="195" y2="16" stroke="#000000" stroke-width="3" opacity="0.6"/>
+    <line x1="220" y1="-16" x2="220" y2="16" stroke="#000000" stroke-width="3" opacity="0.6"/>
+    <circle cx="205" cy="4" r="2" fill="#D4A359"/>
+
+    <!-- Bell Pepper Slice -->
+    <rect x="246" y="-14" width="10" height="28" rx="3" fill="#15803D"/>
+
+    <!-- Meat 3 -->
+    <rect x="264" y="-18" width="58" height="36" rx="10" fill="url(#meatChar)"/>
+    <line x1="280" y1="-14" x2="280" y2="14" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+    <line x1="305" y1="-14" x2="305" y2="14" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+
+    <!-- Meat 4 -->
+    <rect x="330" y="-17" width="55" height="34" rx="10" fill="url(#meatChar)"/>
+    <line x1="345" y1="-13" x2="345" y2="13" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+    <line x1="368" y1="-13" x2="368" y2="13" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+
+    <!-- Pointy tip -->
+    <polygon points="460,-4 475,0 460,4" fill="#94A3B8"/>
+  </g>
+
+  <!-- Skewer 2 (Lower Angle) -->
+  <g transform="translate(60, 235) rotate(4)">
+    <line x1="0" y1="0" x2="480" y2="0" stroke="url(#skewerMetal)" stroke-width="4" stroke-linecap="round"/>
+    <rect x="0" y="-5" width="60" height="10" rx="3" fill="#693C19" stroke="#3D210B" stroke-width="1"/>
+    
+    <rect x="90" y="-17" width="54" height="34" rx="10" fill="url(#meatChar)"/>
+    <line x1="105" y1="-13" x2="105" y2="13" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+    <line x1="128" y1="-13" x2="128" y2="13" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+
+    <rect x="150" y="-14" width="10" height="28" rx="3" fill="#B91C1C"/>
+
+    <rect x="168" y="-19" width="60" height="38" rx="11" fill="url(#meatChar)"/>
+    <line x1="184" y1="-15" x2="184" y2="15" stroke="#000000" stroke-width="3" opacity="0.6"/>
+    <line x1="210" y1="-15" x2="210" y2="15" stroke="#000000" stroke-width="3" opacity="0.6"/>
+    <circle cx="196" cy="5" r="2" fill="#10B981"/>
+
+    <rect x="236" y="-14" width="10" height="28" rx="3" fill="#15803D"/>
+
+    <rect x="254" y="-18" width="58" height="36" rx="10" fill="url(#meatChar)"/>
+    <line x1="270" y1="-14" x2="270" y2="14" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+    <line x1="295" y1="-14" x2="295" y2="14" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+
+    <rect x="320" y="-17" width="56" height="34" rx="10" fill="url(#meatChar)"/>
+    <line x1="336" y1="-13" x2="336" y2="13" stroke="#000000" stroke-width="2.5" opacity="0.6"/>
+  </g>
+
+  <!-- Lime Wedge & Fresh Cilantro Garnish -->
+  <g transform="translate(480, 280)">
+    <circle cx="0" cy="0" r="24" fill="#65A30D" stroke="#4D7C0F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="20" fill="#BEF264"/>
+    <line x1="-16" y1="0" x2="16" y2="0" stroke="#84CC16" stroke-width="1.5"/>
+    <line x1="0" y1="-16" x2="0" y2="16" stroke="#84CC16" stroke-width="1.5"/>
+  </g>
+
+  <!-- Rising Charcoal Smoke -->
+  <path d="M260,110 C250,75 290,55 270,25" stroke="#FFFFFF" stroke-width="3" opacity="0.2" fill="none" stroke-linecap="round"/>
+  <path d="M370,100 C390,65 360,45 380,15" stroke="#FFFFFF" stroke-width="2.5" opacity="0.18" fill="none" stroke-linecap="round"/>
+
+  <!-- Badge Label Overlay -->
+  <rect x="24" y="24" width="160" height="34" rx="8" fill="rgba(15,20,28,0.85)" stroke="#D9531E" stroke-width="1"/>
+  <text x="36" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFF3ED" letter-spacing="1">CHARCOAL SEKUWA</text>
+  <circle cx="166" cy="41" r="3" fill="#EF4444" />
+</svg>

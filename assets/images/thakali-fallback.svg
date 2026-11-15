@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="thakaliBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#241E19" />
+      <stop offset="100%" stop-color="#0F0C0A" />
+    </radialGradient>
+    <radialGradient id="brassPlatter" cx="40%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#F2D08E" />
+      <stop offset="45%" stop-color="#D4A359" />
+      <stop offset="85%" stop-color="#9C6B26" />
+      <stop offset="100%" stop-color="#69430E" />
+    </radialGradient>
+    <linearGradient id="dalGravy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A2218" />
+      <stop offset="100%" stop-color="#140F0A" />
+    </linearGradient>
+    <linearGradient id="curryGravy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9531E" />
+      <stop offset="100%" stop-color="#872502" />
+    </linearGradient>
+    <linearGradient id="greensSaag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E7D32" />
+      <stop offset="100%" stop-color="#1B4D20" />
+    </linearGradient>
+    <filter id="thaliShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#thakaliBg)" />
+
+  <!-- Authentic Brass Thali Platter -->
+  <circle cx="300" cy="205" r="185" fill="url(#brassPlatter)" filter="url(#thaliShadow)" />
+  <circle cx="300" cy="205" r="172" fill="#C99446" stroke="#E6BE72" stroke-width="2" />
+  <circle cx="300" cy="205" r="168" fill="#8F5E1C" opacity="0.4" />
+
+  <!-- Center: Fragrant Himalayan Basmati Rice Mound -->
+  <ellipse cx="300" cy="205" rx="68" ry="60" fill="#FAF8F5" filter="url(#thaliShadow)" />
+  <ellipse cx="300" cy="203" rx="62" ry="54" fill="#FFFFFF" />
+  <!-- Ghee Drizzle & Saffron strands -->
+  <ellipse cx="300" cy="200" rx="18" ry="12" fill="#EAB308" opacity="0.75"/>
+  <path d="M296,198 C302,192 305,204 308,197" stroke="#D9531E" stroke-width="1.8" fill="none"/>
+  <circle cx="302" cy="195" r="1.5" fill="#10B981" />
+
+  <!-- Katori 1: Black Dal (Jimbu lentils) - Top -->
+  <g transform="translate(300, 88)" filter="url(#thaliShadow)">
+    <circle cx="0" cy="0" r="38" fill="url(#brassPlatter)" stroke="#E6BE72" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="32" fill="url(#dalGravy)"/>
+    <!-- Jimbu herbs & butter garnish -->
+    <path d="M-8,-2 Q0,-8 10,-2" stroke="#5C4528" stroke-width="2" fill="none"/>
+    <circle cx="2" cy="0" r="4" fill="#FAF8F5" opacity="0.8"/>
+  </g>
+
+  <!-- Katori 2: Himalayan Mutton / Chicken Curry - Top Right -->
+  <g transform="translate(410, 140)" filter="url(#thaliShadow)">
+    <circle cx="0" cy="0" r="38" fill="url(#brassPlatter)" stroke="#E6BE72" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="32" fill="url(#curryGravy)"/>
+    <rect x="-10" y="-8" width="14" height="12" rx="3" fill="#691F05"/>
+    <rect x="2" y="-2" width="12" height="10" rx="3" fill="#541703"/>
+    <circle cx="0" cy="4" r="2.5" fill="#10B981"/>
+  </g>
+
+  <!-- Katori 3: Rayo ko Saag (Mustard Greens) - Bottom Right -->
+  <g transform="translate(415, 260)" filter="url(#thaliShadow)">
+    <circle cx="0" cy="0" r="36" fill="url(#brassPlatter)" stroke="#E6BE72" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="30" fill="url(#greensSaag)"/>
+    <circle cx="-6" cy="-4" r="3" fill="#3D9B42"/>
+    <circle cx="6" cy="4" r="3.5" fill="#205924"/>
+    <circle cx="1" cy="-2" r="2" fill="#EAB308"/>
+  </g>
+
+  <!-- Katori 4: Fermented Gundruk & Bhatmas Sadeko - Bottom Left -->
+  <g transform="translate(185, 260)" filter="url(#thaliShadow)">
+    <circle cx="0" cy="0" r="36" fill="url(#brassPlatter)" stroke="#E6BE72" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="30" fill="#422918"/>
+    <!-- Toasted soybeans and chili flakes -->
+    <circle cx="-8" cy="-5" r="4" fill="#C99446"/>
+    <circle cx="4" cy="-8" r="4.5" fill="#D4A359"/>
+    <circle cx="2" cy="6" r="4" fill="#A8752B"/>
+    <circle cx="-3" cy="2" r="2" fill="#EF4444"/>
+  </g>
+
+  <!-- Katori 5: Timur Achar & Radish Mula Pickle - Top Left -->
+  <g transform="translate(190, 140)" filter="url(#thaliShadow)">
+    <circle cx="0" cy="0" r="38" fill="url(#brassPlatter)" stroke="#E6BE72" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="32" fill="#D9531E"/>
+    <rect x="-8" y="-6" width="16" height="5" rx="1.5" fill="#FFF5EB"/>
+    <rect x="-5" y="2" width="14" height="5" rx="1.5" fill="#FFE2C9"/>
+    <circle cx="2" cy="-1" r="2" fill="#1F1511"/>
+  </g>
+
+  <!-- Papadum Crunch & Fresh Lemon Slice -->
+  <g transform="translate(300, 310)" filter="url(#thaliShadow)">
+    <polygon points="-30,-8 30,-8 0,-24" fill="#E8C374" stroke="#BD9542" stroke-width="1"/>
+    <circle cx="0" cy="-6" r="10" fill="#EAB308" stroke="#CA8A04" stroke-width="1"/>
+    <circle cx="0" cy="-6" r="8" fill="#FACC15"/>
+  </g>
+
+  <!-- Badge Label Overlay -->
+  <rect x="24" y="24" width="160" height="34" rx="8" fill="rgba(15,20,28,0.85)" stroke="#D4A359" stroke-width="1"/>
+  <text x="36" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FDF8EE" letter-spacing="1">THAKALI FEAST</text>
+  <circle cx="166" cy="41" r="3" fill="#D4A359" />
+</svg>

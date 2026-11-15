@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="chowBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#261A14" />
+      <stop offset="100%" stop-color="#0E0805" />
+    </radialGradient>
+    <linearGradient id="bowlCeramic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D3748" />
+      <stop offset="50%" stop-color="#1A202C" />
+      <stop offset="100%" stop-color="#0F141C" />
+    </linearGradient>
+    <linearGradient id="noodleGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="60%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+    <filter id="chowShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#chowBg)" />
+
+  <!-- Textured Wooden Table Rim -->
+  <ellipse cx="300" cy="210" rx="200" ry="165" fill="#1C1410" stroke="#3D291F" stroke-width="2" />
+
+  <!-- Deep Slate Ceramic Noodle Bowl -->
+  <ellipse cx="300" cy="215" rx="160" ry="130" fill="url(#bowlCeramic)" stroke="#D4A359" stroke-width="2" filter="url(#chowShadow)"/>
+  <ellipse cx="300" cy="210" rx="146" ry="116" fill="#1A202C" />
+
+  <!-- Rich Noodle Tangles (Curved Lines) -->
+  <g stroke="url(#noodleGold)" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M190,200 Q230,150 280,210 T380,180 T410,230" />
+    <path d="M200,225 Q250,270 320,200 T390,240 T420,195" />
+    <path d="M220,180 Q300,160 330,230 T370,170 T390,220" />
+    <path d="M185,215 Q260,240 300,180 T360,250 T415,210" />
+    <path d="M210,240 Q280,260 340,210 T400,200" />
+    <path d="M230,165 Q270,220 330,175 T395,185" />
+    <path d="M240,230 Q300,170 350,240 T410,225" />
+  </g>
+
+  <!-- Veggies & Protein: Capsicum, Carrot, Cabbage, Chicken Strips -->
+  <!-- Carrot Matchsticks -->
+  <g stroke="#EA580C" stroke-width="4" stroke-linecap="round">
+    <line x1="220" y1="190" x2="255" y2="182"/>
+    <line x1="310" y1="195" x2="345" y2="185"/>
+    <line x1="360" y1="230" x2="395" y2="242"/>
+    <line x1="250" y1="245" x2="285" y2="238"/>
+  </g>
+
+  <!-- Green Bell Pepper Strips -->
+  <g stroke="#16A34A" stroke-width="4.5" stroke-linecap="round">
+    <line x1="240" y1="210" x2="275" y2="215"/>
+    <line x1="330" y1="225" x2="368" y2="215"/>
+    <line x1="280" y1="165" x2="315" y2="175"/>
+    <line x1="375" y1="195" x2="405" y2="210"/>
+  </g>
+
+  <!-- Tender Spiced Chicken / Protein Chunks -->
+  <rect x="260" y="195" width="22" height="14" rx="4" fill="#9A3412" stroke="#7C2D12" stroke-width="1"/>
+  <rect x="335" y="175" width="26" height="16" rx="4" fill="#9A3412" stroke="#7C2D12" stroke-width="1"/>
+  <rect x="290" y="235" width="24" height="15" rx="4" fill="#9A3412" stroke="#7C2D12" stroke-width="1"/>
+
+  <!-- Chili Flakes & Spring Onion Garnish -->
+  <circle cx="275" cy="190" r="2" fill="#EF4444"/>
+  <circle cx="320" cy="210" r="2.5" fill="#EF4444"/>
+  <circle cx="350" cy="200" r="2" fill="#EF4444"/>
+  <circle cx="265" cy="230" r="2" fill="#EF4444"/>
+  <circle cx="305" cy="180" r="3" fill="#22C55E"/>
+  <circle cx="360" cy="180" r="3" fill="#22C55E"/>
+  <circle cx="330" cy="245" r="3" fill="#22C55E"/>
+
+  <!-- Bamboo Chopsticks Resting Across Bowl -->
+  <g filter="url(#chowShadow)">
+    <polygon points="170,140 185,138 430,270 422,274" fill="#D4A359" stroke="#A16207" stroke-width="1"/>
+    <polygon points="175,125 190,123 440,260 432,264" fill="#EAB308" stroke="#A16207" stroke-width="1"/>
+  </g>
+
+  <!-- Rising Wok He (Breath of the Wok) Steam -->
+  <path d="M280,140 C270,105 310,80 290,45" stroke="#FFFFFF" stroke-width="3" opacity="0.22" fill="none" stroke-linecap="round"/>
+  <path d="M330,130 C345,95 320,75 340,40" stroke="#FFFFFF" stroke-width="2.5" opacity="0.18" fill="none" stroke-linecap="round"/>
+
+  <!-- Badge Label Overlay -->
+  <rect x="24" y="24" width="160" height="34" rx="8" fill="rgba(15,20,28,0.85)" stroke="#D9531E" stroke-width="1"/>
+  <text x="36" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFF3ED" letter-spacing="1">HIMALAYAN CHOWMEIN</text>
+  <circle cx="166" cy="41" r="3" fill="#F59E0B" />
+</svg>

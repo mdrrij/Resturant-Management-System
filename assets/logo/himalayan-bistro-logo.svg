@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="hlbFlame" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D9531E" />
+      <stop offset="100%" stop-color="#F27A3D" />
+    </linearGradient>
+    <linearGradient id="hlbGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3C677" />
+      <stop offset="100%" stop-color="#B88636" />
+    </linearGradient>
+    <linearGradient id="hlbDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2632" />
+      <stop offset="100%" stop-color="#0F141C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark Container (52x52) -->
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="52" height="52" rx="14" fill="url(#hlbDark)" stroke="url(#hlbGold)" stroke-width="1.2" stroke-opacity="0.5"/>
+    <polygon points="26,11 38,30 14,30" fill="#243040" opacity="0.6"/>
+    <polygon points="19,17 32,37 7,37" fill="url(#hlbFlame)" />
+    <polygon points="19,17 32,37 19,37" fill="#B33E10" opacity="0.5"/>
+    <polygon points="33,20 45,39 21,39" fill="url(#hlbGold)" opacity="0.95"/>
+    <polygon points="33,20 45,39 33,39" fill="#996D25" opacity="0.4"/>
+    <path d="M12,42 Q26,37 40,42" stroke="url(#hlbGold)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M15,45 Q26,41 37,45" stroke="#D9531E" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(72, 0)">
+    <!-- HIMALAYAN Title -->
+    <text x="0" y="27" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="2">HIMALAYAN</text>
+    
+    <!-- BISTRO Accent -->
+    <text x="140" y="27" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#D9531E" letter-spacing="2">BISTRO</text>
+    
+    <!-- Tagline / Subtitle -->
+    <text x="1" y="45" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#94A3B8" letter-spacing="3.2">RESTAURANT MANAGEMENT SYSTEM</text>
+    
+    <!-- Delicate Brass Separator Dot -->
+    <circle cx="236" cy="22" r="2.5" fill="#D4A359" />
+  </g>
+</svg>

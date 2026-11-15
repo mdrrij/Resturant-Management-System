@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wallGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141922" />
+      <stop offset="60%" stop-color="#1C2330" />
+      <stop offset="100%" stop-color="#242E3D" />
+    </linearGradient>
+    <radialGradient id="lampGlow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#F59E0B" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#D9531E" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="floorWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#261710" />
+      <stop offset="100%" stop-color="#120B07" />
+    </linearGradient>
+    <filter id="ambianceShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Wall & Background -->
+  <rect width="600" height="260" fill="url(#wallGradient)" />
+  
+  <!-- Back Wall Geometric Himalayan Mountain Mural -->
+  <polygon points="50,220 180,90 310,220" fill="#18202B" opacity="0.7"/>
+  <polygon points="200,220 340,70 480,220" fill="#121822" opacity="0.85"/>
+  <polygon points="360,220 480,110 600,220" fill="#18202B" opacity="0.6"/>
+  <!-- Mountain Snow Cap Accents (Brass Gold Tone) -->
+  <polygon points="340,70 365,115 315,115" fill="#D4A359" opacity="0.25"/>
+  <polygon points="180,90 200,125 160,125" fill="#D4A359" opacity="0.2"/>
+
+  <!-- Wooden Hardwood Flooring -->
+  <rect y="260" width="600" height="140" fill="url(#floorWood)" />
+  <line x1="0" y1="260" x2="600" y2="260" stroke="#3D2619" stroke-width="2"/>
+  <line x1="120" y1="260" x2="70" y2="400" stroke="#1A100B" stroke-width="1"/>
+  <line x1="280" y1="260" x2="240" y2="400" stroke="#1A100B" stroke-width="1"/>
+  <line x1="440" y1="260" x2="420" y2="400" stroke="#1A100B" stroke-width="1"/>
+
+  <!-- Warm Pendant Lamps from Ceiling -->
+  <!-- Lamp 1 (Left) -->
+  <line x1="180" y1="0" x2="180" y2="95" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M160,105 L200,105 L188,95 L172,95 Z" fill="#D4A359" stroke="#B88636" stroke-width="1"/>
+  <circle cx="180" cy="110" r="6" fill="#FEF08A"/>
+  <ellipse cx="180" cy="160" rx="90" ry="60" fill="url(#lampGlow1)" />
+
+  <!-- Lamp 2 (Center Right) -->
+  <line x1="420" y1="0" x2="420" y2="85" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M400,95 L440,95 L428,85 L412,85 Z" fill="#D4A359" stroke="#B88636" stroke-width="1"/>
+  <circle cx="420" cy="100" r="6" fill="#FEF08A"/>
+  <ellipse cx="420" cy="150" rx="90" ry="60" fill="url(#lampGlow1)" />
+
+  <!-- Table 1 (Left Forefront) -->
+  <g filter="url(#ambianceShadow)">
+    <!-- Table Top -->
+    <ellipse cx="180" cy="270" rx="85" ry="25" fill="#3E271E" stroke="#5A3A2D" stroke-width="2"/>
+    <ellipse cx="180" cy="268" rx="80" ry="22" fill="#2E1D16" />
+    <!-- Table Leg & Base -->
+    <rect x="175" y="270" width="10" height="70" fill="#1A202C"/>
+    <ellipse cx="180" cy="340" rx="35" ry="10" fill="#111827"/>
+    <!-- Chairs -->
+    <path d="M95,235 C95,200 135,200 135,235 L135,275 L95,275 Z" fill="#1A222D" opacity="0.9"/>
+    <path d="M225,235 C225,200 265,200 265,235 L265,275 L225,275 Z" fill="#1A222D" opacity="0.9"/>
+    <!-- Candle / Small Lantern on Table -->
+    <circle cx="180" cy="262" r="5" fill="#F59E0B"/>
+    <circle cx="180" cy="262" r="14" fill="#FBBF24" opacity="0.3"/>
+    <!-- Modern Table Sign / Number -->
+    <rect x="195" y="254" width="12" height="10" rx="2" fill="#D9531E"/>
+  </g>
+
+  <!-- Table 2 (Right Forefront) -->
+  <g filter="url(#ambianceShadow)">
+    <ellipse cx="420" cy="260" rx="85" ry="25" fill="#3E271E" stroke="#5A3A2D" stroke-width="2"/>
+    <ellipse cx="420" cy="258" rx="80" ry="22" fill="#2E1D16" />
+    <rect x="415" y="260" width="10" height="70" fill="#1A202C"/>
+    <ellipse cx="420" cy="330" rx="35" ry="10" fill="#111827"/>
+    <path d="M335,225 C335,190 375,190 375,225 L375,265 L335,265 Z" fill="#1A222D" opacity="0.9"/>
+    <path d="M465,225 C465,190 505,190 505,225 L505,265 L465,265 Z" fill="#1A222D" opacity="0.9"/>
+    <circle cx="420" cy="252" r="5" fill="#F59E0B"/>
+    <circle cx="420" cy="252" r="14" fill="#FBBF24" opacity="0.3"/>
+  </g>
+
+  <!-- Badge Label Overlay -->
+  <rect x="24" y="24" width="160" height="34" rx="8" fill="rgba(15,20,28,0.85)" stroke="#D4A359" stroke-width="1"/>
+  <text x="36" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FDF8EE" letter-spacing="1">BISTRO AMBIANCE</text>
+  <circle cx="166" cy="41" r="3" fill="#D9531E" />
+</svg>
